@@ -1,0 +1,1 @@
+This folder is intended for output from IncludeTimeZone and SplitByTimeZone projects.

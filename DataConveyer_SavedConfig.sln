@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{BD08DDEA-8101-4CB3-AB33-6BBA601D030F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigCreator", "Config\ConfigCreator\ConfigCreator.csproj", "{CA74E6D6-EE3A-4695-BD0F-021147BF84AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeZones", "Config\TimeZones\TimeZones.csproj", "{C42BA13B-DD51-46EE-81BC-34C6665925EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncludeTimeZone", "IncludeTimeZone\IncludeTimeZone.csproj", "{656151E1-5F41-40C2-A003-5E4EBA99EE5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitByTimeZone", "SplitByTimeZone\SplitByTimeZone.csproj", "{E3372FD9-20E9-4CF2-9456-29BF5A57722B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1C25514-F1B0-444A-BD4D-486271C63FF7}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D1FBED74-595E-46D5-A5C8-B72A753D1309}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigData", "ConfigData", "{D906DAED-ABAB-4121-8207-97CAE4E92939}"
+	ProjectSection(SolutionItems) = preProject
+		Common\ConfigData\ReadMe.txt = Common\ConfigData\ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{84E5D13B-1375-4160-8CCE-B25D4DE8BF34}"
+	ProjectSection(SolutionItems) = preProject
+		Common\Input\input.csv = Common\Input\input.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{65BD2B4F-699D-474D-82B2-C09C94126E10}"
+	ProjectSection(SolutionItems) = preProject
+		Common\Output\ReadMe.txt = Common\Output\ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA74E6D6-EE3A-4695-BD0F-021147BF84AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA74E6D6-EE3A-4695-BD0F-021147BF84AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA74E6D6-EE3A-4695-BD0F-021147BF84AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA74E6D6-EE3A-4695-BD0F-021147BF84AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42BA13B-DD51-46EE-81BC-34C6665925EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42BA13B-DD51-46EE-81BC-34C6665925EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42BA13B-DD51-46EE-81BC-34C6665925EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42BA13B-DD51-46EE-81BC-34C6665925EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656151E1-5F41-40C2-A003-5E4EBA99EE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656151E1-5F41-40C2-A003-5E4EBA99EE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656151E1-5F41-40C2-A003-5E4EBA99EE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656151E1-5F41-40C2-A003-5E4EBA99EE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3372FD9-20E9-4CF2-9456-29BF5A57722B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3372FD9-20E9-4CF2-9456-29BF5A57722B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3372FD9-20E9-4CF2-9456-29BF5A57722B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3372FD9-20E9-4CF2-9456-29BF5A57722B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA74E6D6-EE3A-4695-BD0F-021147BF84AD} = {BD08DDEA-8101-4CB3-AB33-6BBA601D030F}
+		{C42BA13B-DD51-46EE-81BC-34C6665925EF} = {BD08DDEA-8101-4CB3-AB33-6BBA601D030F}
+		{D906DAED-ABAB-4121-8207-97CAE4E92939} = {D1FBED74-595E-46D5-A5C8-B72A753D1309}
+		{84E5D13B-1375-4160-8CCE-B25D4DE8BF34} = {D1FBED74-595E-46D5-A5C8-B72A753D1309}
+		{65BD2B4F-699D-474D-82B2-C09C94126E10} = {D1FBED74-595E-46D5-A5C8-B72A753D1309}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2DCB87E-6E42-41CA-91C8-240A1001189B}
+	EndGlobalSection
+EndGlobal
