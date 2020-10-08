@@ -4,7 +4,13 @@ DataConveyer_SavedConfig solution demonstrates ability to save and
 restore Data Conveyer configuration. The configuration is named
 TimeZones and consists of TimeZones.cfg and TimeZones.dll files.
 
-The functionality inside TimeZones.dll calclulates the US time
+The basic idea is to comply with the DRY (Don't Repeat Yourself)
+principle; specifically, to avoid redundant implementation of the same
+transformation functionality needed in 2 different applications:
+IncludeTimeZone and SplitByTimeZone. The TimeZones configuration
+allows transformation functionality to be reused in both applications.
+
+The functionality inside TimeZones.dll calculates the US time
 zone based on the US state. This functionality is used in two
 projects: one project adds the time zone to each person in the
 input list and the other project splits the list of people by the
@@ -29,13 +35,13 @@ Subfolders of the Common folder:
 
   - ConfigData folder intended to contain saved configuration data named TimeZones, i.e. the results from the two projects located in the Config folder.
 
-    + TimeZones.cfg is the XML configuration data created by executing ConfigCreator project.
+    + TimeZones.cfg is the XML configuration data created by executing the ConfigCreator application.
 
-    + TimeZones.dll is the build target of the TimeZones project (copied via post-build event).
+    + TimeZones.dll is the build target of the TimeZones project; it is copied to ConfigData during the TimeZones project build (via post-build event).
 
-  - Input folder that constitutes input location for the two projects located in the main folder, i.e. IncludeTimeZone and SplitByTimeZone (note that both projects use the TimeZones configuration from the ConfigData folder). A sample input file (input.csv) is included.
+  - Input folder - input location for the two projects located in the main folder, i.e. IncludeTimeZone and SplitByTimeZone (note that both projects use the TimeZones configuration from the ConfigData folder). A sample input file (input.csv) is included.
 
-  - Output folder that constitutes output destination for files produced by the two projects located in the main folder, i.e. IncludeTimeZone and SplitByTimeZone.
+  - Output folder - output destination for files produced by the two projects located in the main folder, i.e. IncludeTimeZone and SplitByTimeZone.
 
 ## Installation
 
@@ -45,15 +51,21 @@ Subfolders of the Common folder:
 
 ## Usage
 
-1. Open and build DataConveyer_SavedConfig solution in Visual Studio.
+1. Open DataConveyer_SavedConfig solution in Visual Studio.
 
-2. Run ConfigCreator, e.g. (F5) as it is the Startup Project.
+2. Rebuild the DataConveyer_SavedConfig solution. Build of the TimeZones project will post the
+TimeZones.dll assembly to the ConfigData folder.
 
-3. Run IncludeTimeZone, e.g. by double-clicking exe file in IncludeTimeZone/bin/Debug folder.
+3. Run ConfigCreator, e.g. (F5) as it is the Startup Project. It will add the TimeZones.cfg
+file to the ConfigData folder.
 
-4. Run SplitByTimeZone, e.g. by double-clicking exe file in SplitByTimeZone/bin/Debug folder.
+4. Run IncludeTimeZone, e.g. by double-clicking exe file in IncludeTimeZone/bin/Debug folder.
+The process will use the TimeZones configuration contained in TimeZones.cfg and TimeZones.dll files. 
 
-5. Examine output files placed in the Common/Output folder.
+5. Run SplitByTimeZone, e.g. by double-clicking exe file in SplitByTimeZone/bin/Debug folder.
+The process will reuse the TimeZones configuration contained in TimeZones.cfg and TimeZones.dll files. 
+
+6. Examine output files placed in the Common/Output folder.
 
 ## Contributing
 
@@ -66,5 +78,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Copyright
 
 ```
-Copyright © 2019 Mavidian Technologies Limited Liability Company. All Rights Reserved.
+Copyright © 2019-2020 Mavidian Technologies Limited Liability Company. All Rights Reserved.
 ```

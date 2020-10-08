@@ -1,4 +1,6 @@
-﻿using Mavidian.DataConveyer.Common;
+﻿// Copyright © 2019-2020 Mavidian Technologies Limited Liability Company. All Rights Reserved.
+
+using Mavidian.DataConveyer.Common;
 using Mavidian.DataConveyer.Entities.KeyVal;
 using Mavidian.DataConveyer.Orchestrators;
 using System;
@@ -68,7 +70,7 @@ namespace TimeZones
       public static void ProgressChangedHandler(object s, ProgressEventArgs e)
       {
          if (e.Phase == Phase.Output)
-            Console.Write($"\rProcessed {e.RecCnt.ToString()} records so far...");
+            Console.Write($"\rProcessed {e.RecCnt} records so far...");
       }
      
       /// <summary>
